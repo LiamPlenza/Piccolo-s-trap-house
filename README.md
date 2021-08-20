@@ -1,1 +1,1 @@
-# Piccolo-s-trap-house
+Este repositorio fue creado para el desarrollo del juego Piccolo's Trap House el cual es un proyecto de la materia Asistencia sobre Aplicaciones Específicas
