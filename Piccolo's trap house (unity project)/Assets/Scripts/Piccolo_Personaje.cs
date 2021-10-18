@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Piccolo_Personaje: MonoBehaviour
 {
     public float velocidadMovimiento = 5.0f;
     public float velocidadRotacion = 200.0f;

@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour
     private GameObject[] slot;
 
     public GameObject slotHolder;
+    private GameObject handPoint;
+    private GameObject pickedObject = null;
 
 
     void Start()
