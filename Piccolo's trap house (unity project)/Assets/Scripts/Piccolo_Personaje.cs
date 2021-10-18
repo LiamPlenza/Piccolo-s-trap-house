@@ -11,7 +11,7 @@ public class Piccolo_Personaje: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim= GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,8 +19,11 @@ public class Piccolo_Personaje: MonoBehaviour
     {
         x= Input.GetAxis("Horizontal");
         y= Input.GetAxis("Vertical");
+
         transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
         transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
-        
+
+        anim.SetFloat("VelX", x);
+        anim.SetFloat("VelY", y);
     }
 }
