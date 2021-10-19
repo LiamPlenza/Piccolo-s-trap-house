@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float slopeForceRayLength;
 
     private CharacterController charController;
+    private Animator anim;
 
     [SerializeField] private AnimationCurve jumpFallOff;
     [SerializeField] private float jumpMultiplier;
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         charController = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -49,7 +51,6 @@ public class PlayerMove : MonoBehaviour
         if ((vertInput != 0 || horizInput != 0) && OnSlope())
             charController.Move(Vector3.down * charController.height / 2 * slopeForce * Time.deltaTime);
 
-
         SetMovementSpeed();
         JumpInput();
     }
@@ -57,9 +58,16 @@ public class PlayerMove : MonoBehaviour
     private void SetMovementSpeed()
     {
         if (Input.GetKey(runKey))
+        {
             movementSpeed = Mathf.Lerp(movementSpeed, runSpeed, Time.deltaTime * runBuildUpSpeed);
+            anim.SetFloat("Speed", 1, 0.1f, Time.deltaTime);
+        }
         else
+        {
             movementSpeed = Mathf.Lerp(movementSpeed, walkSpeed, Time.deltaTime * runBuildUpSpeed);
+            anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+        }
+            
     }
 
 

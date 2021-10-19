@@ -1540,6 +1540,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1619,7 +1620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6e125ed94c067140885cc6ee3a997e0, type: 3}
   m_Name: 
@@ -1628,6 +1629,19 @@ MonoBehaviour:
   mouseYInputName: Mouse Y
   mouseSensitivity: 150
   playerBody: {fileID: 543450653390413099}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6966bb34f44209f4d8d000270a44e1e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 40
 --- !u!1001 &972563623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2417,7 +2431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273978843}
   m_LocalRotation: {x: -0.009866651, y: 0.7531116, z: 0.011297136, w: 0.6577219}
-  m_LocalPosition: {x: 461.38498, y: 22.605654, z: 517.122}
+  m_LocalPosition: {x: 463.88345, y: 22.339527, z: 513.1571}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3675,7 +3689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9218316339625431609}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.27, z: 0}
+  m_LocalPosition: {x: 0, y: -0.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450653390413099}
@@ -3780,8 +3794,6 @@ GameObject:
   - component: {fileID: 919132149472970644}
   - component: {fileID: 919132149472970642}
   - component: {fileID: 919132149472970645}
-  - component: {fileID: 919132149472970646}
-  - component: {fileID: 919132149472970647}
   m_Layer: 0
   m_Name: Piccolo
   m_TagString: Untagged
@@ -3796,7 +3808,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149472970641}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d043a9404e8d2734aaf23f0781dcb137, type: 3}
   m_Name: 
@@ -3876,54 +3888,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 919132149472970641}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c20c0482ca6ab84d94b369bd40683e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 963194228}
-  mouseSensitivity: 3
-  walkSpeed: 6
-  gravity: -13
-  moveSmoothTime: 0.3
-  mouseSmoothTime: 0.03
-  lockCursor: 1
---- !u!114 &919132149472970646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149472970641}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05630be432d356744a19222e706ee81b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadMovimiento: 5
-  velocidadRotacion: 200
-  x: 0
-  y: 0
---- !u!114 &919132149472970647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132149472970641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bbb824ad01c6544cb5cece293fcfce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  walkSpeed: 5
-  runSpeed: 20
+  moveSpeed: 200
+  walkSpeed: 20
+  runSpeed: 50
   isGrounded: 1
-  groundCheckDistance: 0.2
+  groundCheckDistance: 1
   groundMask:
     serializedVersion: 2
     m_Bits: 256
   gravity: -9.81
-  jumpHeight: 1.5
+  jumpHeight: 10
 --- !u!4 &936440893235696047
 Transform:
   m_ObjectHideFlags: 0
@@ -4673,7 +4650,7 @@ Animator:
   m_GameObject: {fileID: 919132149472970641}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: df4d443f69f3fe14fb40c41413824bff, type: 3}
-  m_Controller: {fileID: 9100000, guid: a4c52d99d05542d4588d476a2370a0b5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3247f1ae91f0ce146baace24fe0d2a66, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
