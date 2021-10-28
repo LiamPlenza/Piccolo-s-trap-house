@@ -67,6 +67,7 @@
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Terrain\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Terrain\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -113,31 +114,31 @@
      <None Include="Assets\Terrain\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Users/Francisco/Workspace/Unity/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
