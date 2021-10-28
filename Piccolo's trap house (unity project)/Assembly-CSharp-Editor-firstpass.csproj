@@ -283,6 +283,12 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Photon3Unity3D">
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Assets/Plugins/netstandard2.0/Photon3Unity3D.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
