@@ -49,7 +49,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             animator.SetBool("Running", true);
-            speed = speed * 2;
+            speed = 8f;
         }
         else
         {

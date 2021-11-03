@@ -4,7 +4,7 @@ public class Interactable : MonoBehaviour
 {
     public float radius = 2f;
 
-    bool isFocus = false;
+    //bool isFocus = false;
 
     public Transform player;
 
@@ -17,18 +17,18 @@ public class Interactable : MonoBehaviour
     {
         float distance = Vector3.Distance(player.position, transform.position);
 
-        if (distance <= radius && isFocus == true)
+        if (distance <= radius )//&& isFocus == true)
             if(Input.GetKeyDown(KeyCode.E))
                 Interact();
     }
 
-    void OnMouseOver(){
-        isFocus = true;
-    }
+    //void OnMouseOver(){
+    //    isFocus = true;
+    //}
 
-    void OnMouseExit() { 
-        isFocus = false;
-    }
+    //void OnMouseExit() { 
+    //    isFocus = false;
+    //}
 
     void OnDrawGizmosSelected()
     {
