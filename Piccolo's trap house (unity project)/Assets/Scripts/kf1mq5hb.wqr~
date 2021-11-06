@@ -1,0 +1,43 @@
+﻿using UnityEngine;
+
+public class Interactable : MonoBehaviour
+{
+    public float radius = 2f;
+
+    public GameObject text;
+    bool isFocus = false;
+
+    public Transform player;
+
+    public virtual void Interact ()
+    {
+        Debug.Log("Interacting with " + transform.name);
+    }
+
+    private void Update()
+    {
+        float distance = Vector3.Distance(player.position, transform.position);
+
+        if (distance <= radius && isFocus == true)
+        { 
+            if (Input.GetKeyDown(KeyCode.E))
+                Interact();
+        }
+    }
+
+    void OnMouseOver(){
+        isFocus = true;
+        text.SetActive(true);
+    }
+
+    void OnMouseExit() { 
+        isFocus = false;
+        text.SetActive(false);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
+}
