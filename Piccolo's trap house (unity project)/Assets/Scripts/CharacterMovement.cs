@@ -35,6 +35,27 @@ public class CharacterMovement : MonoBehaviour
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
+            if(Input.GetKeyDown(KeyCode.A))
+            {
+                animator.SetBool("Left", true);
+            }
+            else
+                animator.SetBool("Left", false);
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                animator.SetBool("Right", true);
+            }
+            else
+                animator.SetBool("Right", false);
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                animator.SetBool("Backwards", true);
+            }
+            else
+                animator.SetBool("Backwards", false);
+
             Vector3 move = transform.right * x + transform.forward * z;
 
             controller.Move(move * speed * Time.deltaTime);
