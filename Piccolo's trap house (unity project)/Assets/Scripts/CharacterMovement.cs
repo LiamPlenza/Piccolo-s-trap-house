@@ -7,9 +7,9 @@ public class CharacterMovement : MonoBehaviour
 
     public CharacterController controller;
 
-    public float speed;
-    public float gravity;
-    public float jumpHeight;
+    public float speed = 1f;
+    public float gravity = -20f;
+    public float jumpHeight = 1f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -19,6 +19,11 @@ public class CharacterMovement : MonoBehaviour
     bool isGrounded;
 
     public Animator animator;
+
+    void OnEnable()
+    {
+    	controller.enabled = true;
+	}
 
     // Update is called once per frame
     void Update()
@@ -35,26 +40,6 @@ public class CharacterMovement : MonoBehaviour
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
-            if(Input.GetKeyDown(KeyCode.A))
-            {
-                animator.SetBool("Left", true);
-            }
-            else
-                animator.SetBool("Left", false);
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                animator.SetBool("Right", true);
-            }
-            else
-                animator.SetBool("Right", false);
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                animator.SetBool("Backwards", true);
-            }
-            else
-                animator.SetBool("Backwards", false);
 
             Vector3 move = transform.right * x + transform.forward * z;
 
