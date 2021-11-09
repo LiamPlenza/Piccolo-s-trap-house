@@ -2,16 +2,33 @@
 
 public class Doors : Interactable
 {
-    public Animator animator;
+    [SerializeField] private Animator myDoor = null;
+    [SerializeField] private bool openTrigger = false;
+    [SerializeField] private GetBool closetrigger = false;
+
     public override void Interact()
     {
         base.Interact();
 
-        RotateDoor();
+
     }
 
-    void RotateDoor()
+    // void 
+
+    private void OnTriggerEnter(Collider other)
     {
-        animator.Trigger();
+        if (other.CompareTag("Player"))
+        {
+            if (openTrigger)
+            {
+                myDoor.Play("DoorOpen", 0, 0.0f);
+                gameObject.SetActive(false);
+            }
+            else if (closetrigger)
+            {
+                myDoor.Play("DoorClose", 0, 0.0f);
+                gameObject.SetActive(false):
+            }
+        }
     }
 }
