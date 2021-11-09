@@ -7,8 +7,8 @@ public class CharacterMovement : MonoBehaviour
 
     public CharacterController controller;
 
-    public float speed = 1f;
-    public float gravity = -20f;
+    public float speed = 4f;
+    public float gravity = -30f;
     public float jumpHeight = 1f;
 
     public Transform groundCheck;
