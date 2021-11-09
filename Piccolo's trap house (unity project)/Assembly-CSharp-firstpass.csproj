@@ -123,6 +123,7 @@
      <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
      <Compile Include="Assets\Standard Assets\Cameras\Scripts\HandHeldCam.cs" />
+     <Compile Include="Assets\Plugins\WebSocket\SocketWebTcp.cs" />
      <Compile Include="Assets\Standard Assets\Vehicles\Aircraft\Scripts\AeroplanePropellerAnimator.cs" />
      <Compile Include="Assets\Standard Assets\Utility\AlphaButtonClickMask.cs" />
      <Compile Include="Assets\Standard Assets\Utility\DynamicShadowSettings.cs" />
@@ -148,10 +149,9 @@
      <Compile Include="Assets\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
      <Compile Include="Assets\Standard Assets\Utility\FOVKick.cs" />
+     <Compile Include="Assets\Plugins\WebSocket\WebSocket.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
      <Compile Include="Assets\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
-     <Compile Include="Assets\Plugins\WebSocket\SocketWebTcp.cs" />
-     <Compile Include="Assets\Plugins\WebSocket\WebSocket.cs" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\Plugins\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
@@ -188,34 +188,34 @@
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -401,10 +401,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Assets/Plugins/netstandard2.0/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Assets/Plugins/netstandard2.0/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/Pecomputer2/Desktop/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/Usuario/Documents/POLI2021/RABASEDAS/Piccolo/Piccolo-s-trap-house/Piccolo&apos;s trap house (unity project)/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.3f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

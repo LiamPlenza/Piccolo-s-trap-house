@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -12,8 +11,8 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject ConnectPanel;
 
     [SerializeField] private InputField UsernameInput;
-    [SerializeField] private InputField CreateGameInput;
-    [SerializeField] private InputField JoinGameInput;
+    [SerializeField] private InputField CreateInput;
+    [SerializeField] private InputField JoinInput;
 
     [SerializeField] private GameObject StartButton;
 
@@ -52,17 +51,26 @@ public class MenuController : MonoBehaviour
 
     public void CreateGame()
     {
-        PhotonNetwork.CreateRoom(CreateGameInput.text, new RoomOptions() { maxPlayers = 4 }, null);
+        //PhotonNetwork.LeaveRoom();
+        PhotonNetwork.CreateRoom(CreateInput.text, new RoomOptions() { maxPlayers = 4 }, null);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        OnJoinedGame();
     }
     public void JoinGame()
     {
+        //PhotonNetwork.LeaveRoom();
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.maxPlayers = 4;
-        PhotonNetwork.JoinOrCreateRoom(JoinGameInput.text, roomOptions, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom(JoinInput.text, roomOptions, TypedLobby.Default);
+        //SceneManager.LoadScene(1);
     }
 
     public void OnJoinedGame()
     {
         PhotonNetwork.LoadLevel("Game");
+    }
+    public void LeaveRoom()
+    {
+        PhotonNetwork.LeaveRoom();
     }
 }

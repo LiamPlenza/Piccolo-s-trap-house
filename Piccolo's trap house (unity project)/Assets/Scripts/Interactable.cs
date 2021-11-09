@@ -19,6 +19,9 @@ public class Interactable : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             text.text = "Press E to interact";
+
+            if (Input.GetKeyDown(KeyCode.E))
+                Interact();
         }
     }
 
@@ -41,6 +44,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
