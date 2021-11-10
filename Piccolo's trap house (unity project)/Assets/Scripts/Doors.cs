@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Doors : Interactable
+/*public class Doors : Interactable
 {
     [SerializeField] private Animator myDoor = null;
     [SerializeField] private bool openTrigger = false;
@@ -9,8 +9,6 @@ public class Doors : Interactable
     public override void Interact()
     {
         base.Interact();
-
-
     }
 
     // void 
@@ -27,8 +25,8 @@ public class Doors : Interactable
             else if (closetrigger)
             {
                 myDoor.Play("DoorClose", 0, 0.0f);
-                gameObject.SetActive(false):
+                gameObject.SetActive(false);
             }
         }
     }
-}
+}*/
