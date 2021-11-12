@@ -8,7 +8,6 @@ public class ZombieMovement : MonoBehaviour
 
     public float speed;
     public float gravity;
-    public float jumpHeight;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -18,6 +17,8 @@ public class ZombieMovement : MonoBehaviour
     bool isGrounded;
 
     public Animator animator;
+
+    public GameObject player;
 
     // Update is called once per frame
     void Update()
@@ -48,44 +49,30 @@ public class ZombieMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             animator.SetBool("Running", true);
-            speed = 8f;
+            speed = 10f;
         }
         else
         {
             animator.SetBool("Running", false);
-            speed = 4f;
+            speed = 8f;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            animator.SetBool("Attack",true);
-        }
-        else
-        {
-            animator.SetBool("Attack", false);
-        }
-
-        //if (Input.GetKeyDown(KeyCode.E) && isGrounded)
-        //{
-        //    animator.SetBool("Picking", true);
-        //}
-        //else
-        //{
-        //    animator.SetBool("Picking", false);
-        //}
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            animator.SetBool("Jumping", true);
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
-        else
-        {
-            animator.SetBool("Jumping", false);
+            float distance = Vector3.Distance(transform.position, player.transform.position);
+            if (distance <= 2.0f){
+                player.GetComponent<CharacterMovementPresentacion>().reduceLife();
+            }
+            Attack();
         }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void Attack()
+    {
+        animator.SetTrigger("Attack");
     }
 }

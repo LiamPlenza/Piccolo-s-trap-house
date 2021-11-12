@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CharacterMovement : MonoBehaviour
+public class CharacterMovement : Photon.MonoBehaviour
 {
+    public PhotonView photonView;
+    public Text PlayerNameText;
+    public GameObject PlayerCamera;
 
     public CharacterController controller;
 
@@ -19,6 +23,25 @@ public class CharacterMovement : MonoBehaviour
     bool isGrounded;
 
     public Animator animator;
+
+    public int life = 2;
+
+    private float speedIndicator;
+    private float timer = 0.0f;
+
+    private void Awake()
+    {
+        if (photonView.isMine)
+        {
+            //PlayerCamera.SetActive(true);
+            PlayerNameText.text = PhotonNetwork.playerName;
+        }
+        else
+        {
+            PlayerNameText.text = photonView.owner.name;
+            PlayerNameText.color = Color.cyan;
+        }
+    }
 
     void OnEnable()
     {
@@ -55,22 +78,13 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             animator.SetBool("Running", true);
-            speed = 8f;
+            speedIndicator = 1;
         }
         else
         {
             animator.SetBool("Running", false);
-            speed = 4f;
+            speedIndicator = 2;
         }
-
-        //if (Input.GetKeyDown(KeyCode.E) && isGrounded)
-        //{
-        //    animator.SetBool("Picking", true);
-        //}
-        //else
-        //{
-        //    animator.SetBool("Picking", false);
-        //}
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -85,5 +99,26 @@ public class CharacterMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (life == 1) {
+            timer += Time.deltaTime; 
+            if (timer < 3.0f)
+                speed = 10.0f;
+            else if (speedIndicator == 1)
+                speed = 7.5f;
+            else if (speedIndicator == 2)
+                speed = 3.5f;
+        }
+        else if (life == 0)
+            Destroy(gameObject);
+        else if (speedIndicator == 1)
+            speed = 8.0f;
+        else if (speedIndicator == 2)
+            speed = 4.0f;
+        
+    }
+
+    public void reduceLife(){
+        life -= 1;
     }
 }
