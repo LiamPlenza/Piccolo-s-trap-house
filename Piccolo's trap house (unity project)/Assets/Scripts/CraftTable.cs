@@ -6,7 +6,7 @@ public class CraftTable : Interactable
 {
     public List<Item> itemsList;
 
-    public int itemsInTable = 0;
+    private int itemsInTable = 0;
 
     public GameObject axe;
     public GameObject crawbar;
@@ -23,18 +23,11 @@ public class CraftTable : Interactable
 
         Craft();
     }
-
     public void Craft()
     {
         itemsList = player.GetComponent<Inventory>().items;
         foreach (var item in itemsList)
         {
-            if (itemsInTable == 3)
-            {
-                Destroy(axeInTable);
-                Destroy(hacksawInTable);
-                Destroy(crowbarInTable);
-            }
             if (item.name == "Axe")
             {
                 itemsInTable += 1;
@@ -62,6 +55,13 @@ public class CraftTable : Interactable
                 crowbarInTable.transform.localScale = new Vector3(2.4216001f, 2.4216001f, 2.4216001f);
                 player.GetComponent<Inventory>().Remove(item);
             }
+        }
+        if (itemsInTable == 3)
+        {
+            Destroy(axeInTable);
+            Destroy(hacksawInTable);
+            Destroy(crowbarInTable);
+            itemsInTable = 0;
         }
     }
 }
