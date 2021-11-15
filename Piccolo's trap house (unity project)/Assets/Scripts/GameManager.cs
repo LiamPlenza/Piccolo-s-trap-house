@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 	public GameObject PlayerPrefab;
+	public GameObject PiccoloPrefab;
 	public GameObject GameCanvas;
 	public GameObject SceneCamera;
+	public GameObject Inventory;
 	public Text PingText;
 	public GameObject disconnectUI;
 	private bool Off = false;
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
 
 	public void Update()
 	{
-		PingText.text = "Ping " + PhotonNetwork.GetPing();
+		//PingText.text = "Ping " + PhotonNetwork.GetPing();
 	}
 
 	private void CheckInput()
@@ -42,11 +44,15 @@ public class GameManager : MonoBehaviour
 
 	public void SpawnPlayer()
 	{
-		float randomValue = Random.Range(-1f, 1f);
-
-		PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(this.transform.position.x * randomValue, this.transform.position.y), Quaternion.identity, 0);
+		//float randomValue = Random.Range(-1f, 1f);
+		if (PhotonNetwork.playerName == "piccolo") {
+			PhotonNetwork.Instantiate(PiccoloPrefab.name, new Vector3(131f, 9f, 122f), Quaternion.identity, 0);
+		} else {
+			PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector3(125f, 1f, 20f), Quaternion.identity, 0);
+		}
 		GameCanvas.SetActive(false);
 		SceneCamera.SetActive(false);
+		Inventory.SetActive(true);
 	}
 
 	public void LeaveRoom()

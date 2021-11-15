@@ -1956,7 +1956,6 @@ GameObject:
   - component: {fileID: 4083532640490969563}
   - component: {fileID: 7620384021871143338}
   - component: {fileID: 7620384021871143337}
-  - component: {fileID: -5332933966447963033}
   m_Layer: 9
   m_Name: PERSONAJE1
   m_TagString: Untagged
@@ -2033,6 +2032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc71df00d90b0e44815f1d15ee7a6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerNameText: {fileID: 0}
+  PlayerCamera: {fileID: 0}
   controller: {fileID: 7620384021871143338}
   speed: 1
   gravity: -30
@@ -2044,20 +2045,6 @@ MonoBehaviour:
     m_Bits: 256
   animator: {fileID: 4083532640490969563}
   life: 2
---- !u!114 &-5332933966447963033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7277926077364754715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e39c82fd0a75b24a9754a5cf328dc71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
-  PlayerNameText: {fileID: 0}
 --- !u!1 &7405055199200492096
 GameObject:
   m_ObjectHideFlags: 0

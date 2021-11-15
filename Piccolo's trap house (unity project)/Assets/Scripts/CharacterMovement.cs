@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterMovement : Photon.MonoBehaviour
 {
-    public PhotonView photonView;
+    //public PhotonView photonView;
     public Text PlayerNameText;
     public GameObject PlayerCamera;
 
@@ -29,7 +29,7 @@ public class CharacterMovement : Photon.MonoBehaviour
     private float speedIndicator;
     private float timer = 0.0f;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (photonView.isMine)
         {
@@ -48,7 +48,7 @@ public class CharacterMovement : Photon.MonoBehaviour
     	controller.enabled = true;
 	}
 
-    // Update is called once per frame
+    Update is called once per frame*/
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -115,7 +115,6 @@ public class CharacterMovement : Photon.MonoBehaviour
             speed = 8.0f;
         else if (speedIndicator == 2)
             speed = 4.0f;
-        
     }
 
     public void reduceLife(){

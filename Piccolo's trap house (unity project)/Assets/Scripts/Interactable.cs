@@ -7,7 +7,13 @@ public class Interactable : MonoBehaviour
 
     public Text text;
 
-    public Transform player;
+    //public Transform player;
+
+    public GameObject player;
+
+    void Start() {
+        player = GameObject.FindWithTag("zombie");
+    }
 
     public virtual void Interact ()
     {
@@ -35,7 +41,7 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        float distance = Vector3.Distance(player.position, transform.position);
+        float distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (distance <= radius)//&& isFocus == true)
         {

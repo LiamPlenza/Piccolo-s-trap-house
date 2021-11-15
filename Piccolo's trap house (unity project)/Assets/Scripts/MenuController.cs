@@ -54,7 +54,7 @@ public class MenuController : MonoBehaviour
         //PhotonNetwork.LeaveRoom();
         PhotonNetwork.CreateRoom(CreateInput.text, new RoomOptions() { maxPlayers = 4 }, null);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        OnJoinedGame();
+        //OnJoinedGame();
     }
     public void JoinGame()
     {
@@ -63,9 +63,10 @@ public class MenuController : MonoBehaviour
         roomOptions.maxPlayers = 4;
         PhotonNetwork.JoinOrCreateRoom(JoinInput.text, roomOptions, TypedLobby.Default);
         //SceneManager.LoadScene(1);
+        //OnJoinedGame();
     }
 
-    public void OnJoinedGame()
+    public void OnJoinedRoom()
     {
         PhotonNetwork.LoadLevel("Game");
     }
