@@ -13,6 +13,8 @@ public class CraftTable : Interactable
     public GameObject finalMace;
     public GameObject tuerca;
 
+    public Item mazeItem;
+
     private GameObject maceInTable;
     private GameObject maceHandleInTable;
     private GameObject finalMaceInTable;
@@ -36,8 +38,8 @@ public class CraftTable : Interactable
             {
                 itemsInTable += 1;
                 maceHandleInTable = Instantiate(maceHandle);
-                maceHandleInTable.transform.position = new Vector3(120.059998f, 1.66999996f, 82.3899994f);
-                maceHandleInTable.transform.rotation = Quaternion.Euler(359.357239f, 251.948883f, 87.0570908f);
+                maceHandleInTable.transform.position = new Vector3(132.559998f, 7.08775806f, 136.070007f);
+                maceHandleInTable.transform.rotation = Quaternion.Euler(0.000160509444f, 60.0000572f, 270);
                 maceHandleInTable.transform.localScale = new Vector3(1, 1, 1);
                 player.GetComponent<Inventory>().Remove(item);
             }
@@ -45,8 +47,8 @@ public class CraftTable : Interactable
             {
                 itemsInTable += 1;
                 maceInTable = Instantiate(mace);
-                maceInTable.transform.position = new Vector3(118.410004f, 0.159999996f, 82.1699982f);
-                maceInTable.transform.rotation = Quaternion.Euler(270, 310.73291f, 0);
+                maceInTable.transform.position = new Vector3(134.009995f, 6.19000006f, 136.089996f);
+                maceInTable.transform.rotation = Quaternion.Euler(270, 315.000092f, 0);
                 maceInTable.transform.localScale = new Vector3(1.47961938f, 1.47961938f, 1.47961938f);
                 player.GetComponent<Inventory>().Remove(item);
             }
@@ -54,7 +56,7 @@ public class CraftTable : Interactable
             {
                 itemsInTable += 1;
                 tuercaInTable = Instantiate(tuerca);
-                tuercaInTable.transform.position = new Vector3(117.82f, 1.60300004f, 81.8199997f);
+                tuercaInTable.transform.position = new Vector3(133.432999f, 7.03682995f, 135.770996f);
                 tuercaInTable.transform.rotation = Quaternion.Euler(270.019775f, 0, 0);
                 tuercaInTable.transform.localScale = new Vector3(32.6539116f, 32.6539116f, 32.6539116f);
                 player.GetComponent<Inventory>().Remove(item);
@@ -70,10 +72,11 @@ public class CraftTable : Interactable
             Destroy(maceInTable);
             Destroy(maceHandleInTable);
             finalMaceInTable = Instantiate(finalMace);
-            finalMaceInTable.transform.position = new Vector3(119.342003f, 1.68599999f, 82.4300003f);
+            finalMaceInTable.transform.position = new Vector3(133.271912f, 7.15700006f, 135.81517f);
             finalMaceInTable.transform.rotation = Quaternion.Euler(-5.46415067f, 180, 176.073318f);
             finalMaceInTable.transform.localScale = new Vector3(2.74106288f, 2.74106288f, 2.74106288f);
             finalMaceInTable.AddComponent<ItemPickup>();
+            finalMaceInTable.GetComponent<ItemPickup>().item = mazeItem;
             this.GetComponent<CraftTable>().enabled = false;
             itemsInTable = 0;
         }

@@ -46,11 +46,8 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-
         player = GameObject.FindWithTag("Player");
         text = GameObject.FindWithTag("Press E").GetComponent<Text>();
-
-
 
         float distance = Vector3.Distance(player.transform.position, transform.position);
 
