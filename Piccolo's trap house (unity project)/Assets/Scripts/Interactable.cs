@@ -9,11 +9,16 @@ public class Interactable : MonoBehaviour
 
     public GameObject player;
 
-    public void Start()
+    /*public void Awake()
     {
         player = GameObject.FindWithTag("Player");
         text = GameObject.FindWithTag("Press E").GetComponent<Text>();
     }
+    public void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+        text = GameObject.FindWithTag("Press E").GetComponent<Text>();
+    }*/
 
     public virtual void Interact ()
     {
@@ -41,9 +46,15 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
+
+        player = GameObject.FindWithTag("Player");
+        text = GameObject.FindWithTag("Press E").GetComponent<Text>();
+
+
+
         float distance = Vector3.Distance(player.transform.position, transform.position);
 
-        if (distance <= radius)//&& isFocus == true)
+        if (distance <= radius)//&& isFocus == true)S
         {
             if (Input.GetKeyDown(KeyCode.E))
                 Interact();

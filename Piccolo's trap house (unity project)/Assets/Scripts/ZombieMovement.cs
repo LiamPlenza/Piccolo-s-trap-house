@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZombieMovement : MonoBehaviour
 {
+    public PhotonView photonView;
+    public Text PlayerNameText;
+    public GameObject PlayerCamera;
+
     public CharacterController controller;
 
     public float speed;
@@ -20,9 +25,24 @@ public class ZombieMovement : MonoBehaviour
 
     public GameObject player;
 
+
+    private void Awake()
+    {
+        if (photonView.isMine)
+        {
+            PlayerCamera.SetActive(true);
+            PlayerNameText.text = PhotonNetwork.playerName;
+        }
+        else
+        {
+            PlayerNameText.text = photonView.owner.name;
+            PlayerNameText.color = Color.cyan;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
+      if (photonView.isMine) {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -69,6 +89,7 @@ public class ZombieMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+      }
     }
 
     public void Attack()
