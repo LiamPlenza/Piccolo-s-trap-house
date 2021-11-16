@@ -9,6 +9,7 @@ TagManager:
   - WeaponManager
   - Text
   - Zombie
+  - Press E
   layers:
   - Default
   - TransparentFX

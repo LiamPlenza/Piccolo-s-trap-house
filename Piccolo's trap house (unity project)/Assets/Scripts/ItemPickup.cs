@@ -17,7 +17,7 @@ public class ItemPickup : Interactable
 
         if (wasPickedUp)
         {
-            text.text = "";
+            text.enabled = false;
             Destroy(gameObject);
         }
     }

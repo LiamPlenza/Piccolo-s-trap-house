@@ -7,7 +7,13 @@ public class Interactable : MonoBehaviour
 
     public Text text;
 
-    public Transform player;
+    public GameObject player;
+
+    public void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+        text = GameObject.FindWithTag("Press E").GetComponent<Text>();
+    }
 
     public virtual void Interact ()
     {
@@ -18,7 +24,7 @@ public class Interactable : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            text.text = "Press E to interact";
+            text.enabled = true;
 
             if (Input.GetKeyDown(KeyCode.E))
                 Interact();
@@ -29,13 +35,13 @@ public class Interactable : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            text.text = "";
+            text.enabled = false;
         }
     }
 
     private void Update()
     {
-        float distance = Vector3.Distance(player.position, transform.position);
+        float distance = Vector3.Distance(player.transform.position, transform.position);
 
         if (distance <= radius)//&& isFocus == true)
         {
