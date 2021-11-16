@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - ClickAndDrag
     - ClickDetector
     - ColorPerPlayerApply
+    - CraftTable
     - Door
     - EnableItemPickap
     - EnablePlayer
@@ -198,6 +199,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15552}
     - Class: 114
       Script: {instanceID: 15800}
+    - Class: 114
+      Script: {instanceID: 16260}
     - Class: 114
       Script: {instanceID: 16364}
     - Class: 114
@@ -2320,7 +2323,7 @@ ScriptsOnlyBuild:
     className: MoveByKeys
   - hash:
       serializedVersion: 2
-      Hash: 6f4d692bb91ef898247fdfcd3fc39296
+      Hash: 1072b49c85b7f228a495ba6cb9e0aedc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CraftTable
@@ -2622,4 +2625,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/tomas/Desktop/Build/New Unity Project.exe
+  playerPath: C:/Users/Usuario/Desktop/koacasini/New Unity Project.exe

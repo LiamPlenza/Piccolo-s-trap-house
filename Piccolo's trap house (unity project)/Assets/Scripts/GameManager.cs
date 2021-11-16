@@ -18,26 +18,28 @@ public class GameManager : MonoBehaviour
 
 	private void Awake()
 	{
-		CheckInput();
+		//CheckInput();
 		GameCanvas.SetActive(true);
 	}
 
 	public void Update()
 	{
+		CheckInput();
 		//PingText.text = "Ping " + PhotonNetwork.GetPing();
 	}
 
 	private void CheckInput()
 	{
-		if (Off && Input.GetKeyDown(KeyCode.Escape))
+		if (/*Off && */Input.GetKeyDown(KeyCode.Escape))
 		{
-			disconnectUI.SetActive(false);
-			Off = false;
+			//LeaveRoom();
+			//disconnectUI.SetActive(false);
+			//Off = false;
 		}
 		else if (!Off && Input.GetKeyDown(KeyCode.Escape))
 		{
-			disconnectUI.SetActive(true);
-			Off = true;
+			//disconnectUI.SetActive(true);
+			//Off = true;
 		}
 	}
 
