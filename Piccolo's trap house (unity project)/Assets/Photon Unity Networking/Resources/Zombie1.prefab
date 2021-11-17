@@ -435,7 +435,7 @@ CharacterController:
   m_Height: 1.64
   m_Radius: 0.34
   m_SlopeLimit: 45
-  m_StepOffset: 0
+  m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.84, z: 0}
@@ -455,7 +455,7 @@ MonoBehaviour:
   PlayerNameText: {fileID: 4003006495971288868}
   PlayerCamera: {fileID: 3045065220853529858}
   controller: {fileID: 3045065220188370123}
-  speed: 8
+  speed: 3
   gravity: -30
   groundCheck: {fileID: 3045065221506721007}
   groundDistance: 0.4

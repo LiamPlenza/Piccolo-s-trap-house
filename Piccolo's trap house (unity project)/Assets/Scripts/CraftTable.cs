@@ -47,7 +47,7 @@ public class CraftTable : Interactable
             {
                 itemsInTable += 1;
                 maceInTable = Instantiate(mace);
-                maceInTable.transform.position = new Vector3(134.009995f, 6.19000006f, 136.089996f);
+                maceInTable.transform.position = new Vector3(134.009995f, 5.67999983f, 136.089996f);
                 maceInTable.transform.rotation = Quaternion.Euler(270, 315.000092f, 0);
                 maceInTable.transform.localScale = new Vector3(1.47961938f, 1.47961938f, 1.47961938f);
                 player.GetComponent<Inventory>().Remove(item);

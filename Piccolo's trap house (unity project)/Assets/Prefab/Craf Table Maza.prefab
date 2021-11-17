@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 392060026565156936}
   - component: {fileID: 392060026565156951}
   m_Layer: 0
-  m_Name: CrateLarge
+  m_Name: Craf Table Maza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,8 +129,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0032413, y: 2, z: 0.60000014}
-  m_Center: {x: -0.0016204717, y: 0, z: 0.30000007}
+  m_Size: {x: 2.0032413, y: 0.76, z: 0.60000014}
+  m_Center: {x: -0.0016204717, y: 0.69, z: 0.30000007}
 --- !u!114 &392060026565156951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +151,4 @@ MonoBehaviour:
   maceHandle: {fileID: 6480835908721338796, guid: 579a4c04ad45d574baf83cc6efeb3abc, type: 3}
   finalMace: {fileID: 100000, guid: a0042214ad91bb442ac62e8066ff05a2, type: 3}
   tuerca: {fileID: -927199367670048503, guid: 89cbe59daf38b4f5b9e56ce71ee811ec, type: 3}
+  mazeItem: {fileID: 11400000, guid: 0d34dbf187d7b9549b96729cc183d3b4, type: 2}

@@ -119,7 +119,6 @@ public class CharacterMovement : Photon.MonoBehaviour
             speed = 4.0f;
       }
     }
-
     public void reduceLife(){
         life -= 1;
     }
