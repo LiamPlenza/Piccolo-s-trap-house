@@ -12,7 +12,7 @@ public class CharacterMovement : Photon.MonoBehaviour
     public CharacterController controller;
 
     public float speed = 4f;
-    public float gravity = -30f;
+    public float gravity = -9.5f;
     public float jumpHeight = 1f;
 
     public Transform groundCheck;

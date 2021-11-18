@@ -345,7 +345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2329003145398697894
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3536,7 +3536,7 @@ MonoBehaviour:
   PlayerCamera: {fileID: 9169212098659431360}
   controller: {fileID: 9169212099326888169}
   speed: 4
-  gravity: 9.5
+  gravity: -9.5
   jumpHeight: 1
   groundCheck: {fileID: 9169212099438400819}
   groundDistance: 0.4

@@ -69,12 +69,12 @@ public class ZombieMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
         {
             animator.SetBool("Running", true);
-            speed = 3f;
+            speed = 6f;
         }
         else
         {
             animator.SetBool("Running", false);
-            speed = 6f;
+            speed = 3f;
         }
 
         if (Input.GetMouseButtonDown(0))

@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 	private void Awake()
 	{
 		//CheckInput();
-		GameCanvas.SetActive(true);
+		SpawnPlayer();
 	}
 
 	public void Update()
@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour
 		} else {
 			PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector3(125f, 1f, 20f), Quaternion.identity, 0);
 		}
-		GameCanvas.SetActive(false);
-		SceneCamera.SetActive(false);
+		//GameCanvas.SetActive(false);
+		//SceneCamera.SetActive(false);
 	}
 
 	public void LeaveRoom()
